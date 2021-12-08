@@ -1,0 +1,37 @@
+<div class="container-fluid bd-white bg-card">
+  <div class="row justify-content-center">
+    <div>
+      <img class="img-fluid" src="../../assets/img/logo.jpg">
+    </div>
+    <div class="col-md-6 mt-5 col-12">
+      <div>
+        <h1 class="title">Login</h1>
+      </div>
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">E-mail</label>
+          <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Seu e-mail" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group">
+          <label  for="exampleInputPassword1">Senha</label>
+          <input [(ngModel)]="senha" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="exampleInputPassword1" placeholder="Sua senha">
+          <small id="emailHelp" class="form-text text-muted center">Nunca vamos compartilhar seus dados com
+            ninguém.</small>
+        </div>
+        <div class="center">
+          <a class="linkHover" [routerLinkActive]="['link-active']" [routerLink]="['/redefinirSenha']">Esqueci minha
+            senha</a>
+        </div>
+        <div class="center">
+          <button type="submit"
+            class="btn btn-primary btn-block" (click)="logar()">Login</button>
+        </div>
+        <div class="center">
+          <a class="linkHover" [routerLinkActive]="['link-active']" [routerLink]="['/cadastro']">Não tem conta ainda?
+            Cadastre-se</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
